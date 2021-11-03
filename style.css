@@ -1,0 +1,221 @@
+:root {
+    --navcolor: linear-gradient(to right, rgb(54, 53, 53), gray, rgba(128, 128, 128));
+    --footernavcolor: #38da38;
+}
+* {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    list-style-type: none;
+    text-decoration: none;
+    color: white;
+}
+body {
+    background-image: url(https://images.pexels.com/photos/160107/pexels-photo-160107.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+/* header */
+#home > #home_main > figure > img {
+    clip-path: circle(30% at 50% 60%);
+    width: 30%;
+    position: absolute;
+    top: -5%;
+}
+header {
+    background-image: linear-gradient(to right, rgb(54, 53, 53), gray, rgba(128, 128, 128));
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+
+    animation-name: exampl;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+@keyframes exampl {
+    0% {background-image: linear-gradient(to right, rgb(54, 53, 53), gray, rgba(128, 128, 128));}
+    100% {background-image: linear-gradient(to left, rgb(54, 53, 53), gray, rgba(128, 128, 128));}
+}
+header > nav > ul {
+    display: flex;
+}
+header > nav > ul > li {
+    margin: 1rem;
+}
+header > nav > ul > li > a {
+    text-transform: uppercase;
+}
+header > nav > ul > li > a::before {
+    font-family: "Font Awesome 5 Free"; 
+    font-weight: 900; 
+    margin: 0.5rem;
+}
+header > nav > ul > li:nth-child(1) > a::before {
+    content: "\f015";
+}
+header > nav > ul > li:nth-child(2) > a::before {
+    content: "\f19d";
+}
+header > nav > ul > li:nth-child(3) > a::before {
+    content: "\f02d";
+}
+header > nav > ul > li:nth-child(4) > a::before {
+    content: "\f5da";
+}
+header > nav > ul > li:nth-child(5) > a::before {
+    content: "\f2bb";
+}
+header > nav > ul > li > a:hover {
+    color: var(--footernavcolor);
+    transition: 500ms ease-in-out;
+}
+/* main */
+main {
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+    overflow-x: hidden;
+}
+#home_main > h1 {
+    position: absolute;
+    top: 70%;
+    left: 7%;
+    background: gray;
+    padding: 1rem;
+    border-radius: 1rem;
+    color: #434248;
+
+    animation: name1 2s;
+}
+#home_main > h2 {
+    position: absolute;
+    top: 30rem;
+    left: 50rem;
+    background: gray;
+    padding: 1rem;
+    border-radius: 1rem;
+    font-size: 3rem;
+    color: #434248;
+
+    animation: name 2s;
+}
+@keyframes name {
+    from {
+        transform: translateX(130%);
+    }
+    to {
+        transform: translateX(0%);
+    }
+}
+@keyframes name1 {
+    from {
+        transform: translateX(-190%);
+    }
+    to {
+        transform: translateX(0%)
+    }
+}
+/* footer */
+footer {
+    display: flex;
+    justify-content: space-around;
+    background-image: linear-gradient(to left, rgb(54, 53, 53), gray, rgba(128, 128, 128));
+    padding: 1rem;
+}
+footer > a {
+    text-transform: uppercase;
+}
+
+footer > a:hover {
+    color: var(--footernavcolor);
+}
+/* responsiv */
+
+@media screen and (max-width: 1024px) {
+    #home > #home_main > figure > img {
+        width: 40%;
+    }
+    #home_main > h2 {
+        font-size: 3rem;
+        left: 25rem;
+    }
+}
+@media screen and (max-width: 768px) {
+    #home > #home_main > figure > img {
+        width: 50%;
+    }
+    #home_main > h1 {
+        font-size: 2rem;
+        left: 0rem;
+    }
+    #home_main > h2 {
+        font-size: 3rem;
+        left: 20rem;
+    }
+}
+/* nav mobile */
+
+@media screen and (max-width: 425px) {
+    #home > header > nav > ul {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        background: var(--navcolor);
+        right: 0rem;
+        padding: 0rem;
+        border-radius: 0rem 0rem 0rem 1.5rem;
+
+        animation: nav 2s;
+    }
+    @keyframes nav {
+        from {
+            transform: translateY(-16rem);
+        }
+        to {
+            transform: translateY(0rem);
+        }
+    }
+    #home > header > nav > ul a {
+        font-size: 0.9rem;
+    }
+    #home > header > nav > ul li {
+        font-size: 0.9rem;
+        margin: 0.5rem;
+    }
+    #home > #home_main > figure > img {
+        width: 75%;
+        top: -3rem;
+        left: -1rem;
+    }
+    #home_main > h1 {
+        font-size: 1.5rem;
+        top: 25rem;
+        left: 0rem;
+    }
+    #home_main > h2 {
+        font-size: 2rem;
+        left: 6rem;
+    }
+}
+@media screen and (max-width: 375px) {
+    #home > #home_main > figure > img {
+        width: 80%;
+        top: -2rem;
+        left: -2rem;
+    }
+    footer a {
+        font-size: 0.9rem;
+    }
+}
+@media screen and (max-width: 320px) {
+    #home > #home_main > figure > img {
+        width: 90%;
+        top: 2rem;
+    }
+    footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}

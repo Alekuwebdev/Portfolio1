@@ -1,0 +1,148 @@
+#skills {
+    background-image: url(https://images.pexels.com/photos/574071/pexels-photo-574071.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);
+}
+#home_skills {
+    display: flex;
+    justify-content: space-around;
+}
+#home_skills > figure {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin: 2rem;
+}
+#home_skills > figure > img {
+    position: relative;
+    width: 15rem;
+    clip-path: circle(50% at 50% 50%);
+    background: white;
+}
+#home_skills > figure > figcaption {
+    position: absolute;
+    font-size: 3rem;
+    top: 3rem;
+    background: rgba(128, 128, 128, 0.705);
+    border-radius: 1rem;
+    padding: 0.5rem;
+    color: white;
+    top: 6rem;
+
+    animation: text 2s;
+}
+#home_skills > figure > ul {
+    position: absolute;
+    top: 50rem;
+}
+@keyframes text {
+    from {
+        transform: scale(0%);
+    }
+    to {
+        transform: scale(100%);
+    }
+}
+#home_skills > :nth-child(1) > img {
+    animation: img1 2s;
+}
+@keyframes img1 {
+    from {
+        transform: translate(-200%) rotateZ(-90deg);
+    }
+    to {
+        transform: translate(0%);
+    }
+}
+#home_skills > :nth-child(2) > img {
+    animation: img2 2s;
+}
+@keyframes img2 {
+    from {
+        transform: scale(0%) rotateY(360deg);
+    }
+    to {
+        transform: scale(100%);
+    }
+}
+#home_skills > :nth-child(3) > img {
+    animation: img3 2s;
+}
+@keyframes img3 {
+    from {
+        transform: scale(0%) rotateX(360deg);
+    }
+    to {
+     transform: scale(100%); 
+    }
+}
+#home_skills > :nth-child(4) > img {
+    animation: img4 2s;
+}
+@keyframes img4 {
+    from {
+        transform: scale(0%) rotateZ(360deg);
+    }
+    to {
+        transform: scale(100%);
+    }
+}
+
+/* responsiv */
+
+@media screen and (max-width: 1024px) {
+    #home_skills > figure > img {
+        width: 12rem;
+    }
+    #home_skills > figure > figcaption {
+        font-size: 2rem;
+        top: 10rem;
+    }
+}
+@media screen and (max-width: 768px) {
+    #home_skills {
+        display: flex;
+        flex-wrap: wrap;
+        top: 2rem;
+    }
+    #home_skills > figure > img {
+        width: 13rem;
+    }
+    #home_skills > figure > figcaption {
+        font-size: 1.5rem;
+        top: 17rem;
+        z-index: -1;
+    }
+}
+/* mobile responsiv */
+@media screen and (max-width: 425px) {
+    #skills > header > nav > ul {
+        display: flex;
+        flex-wrap: wrap;
+        position: absolute;
+        background: var(--navcolor);
+        right: 0rem;
+        padding: 0rem;
+        border-radius: 0rem 0rem 1.5rem 1.5rem;
+
+        animation: nav 2s;
+    }
+    #skills > header > nav > ul li {
+        margin: 0.4rem;
+    }
+    #home_skills > figure {
+        top: 2rem;
+        z-index: -1;
+    }
+    #home_skills > figure > figcaption {
+       top: 14rem;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    #home_skills > figure {
+        top: 2rem;
+    }
+    #skills > header > nav > ul li {
+        margin: 0.3rem;
+    }
+}

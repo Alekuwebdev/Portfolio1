@@ -1,0 +1,95 @@
+#about {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(https://images.pexels.com/photos/169573/pexels-photo-169573.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260);
+
+}
+#home_about > section {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+#home_about > h1 {
+    margin-top: 5rem;
+    text-align: center;
+    font-size: 5rem;
+}
+#home_about > section > article > h2 {
+    text-align: center;
+    margin: 1rem;
+    font-size: 3rem;
+}
+#home_about > section p {
+    font-family: sans-serif;
+    letter-spacing: 0.1rem;
+}
+#home_about > section > article {
+    
+    padding: 1rem;
+    text-align: center;
+    background: rgba(128, 128, 128, 0.349);
+    margin: 0.7rem;
+    border-radius: 0.5rem;
+}
+#home_about > section > article p,
+#home_about > section > .language > ul > li,
+#home_about > section > .experience > nav > ul > li
+ {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: sans-serif;
+    font-size: 1.5rem;
+}
+#home_about > section > .language ul > :nth-child(1)::before {
+    content: "🇲🇩/🇷🇴";
+    margin: 0rem 1rem;
+}
+#home_about > section > .language ul > :nth-child(2)::before {
+    content: "🇷🇺";
+    margin: 0rem 1rem;
+}
+#home_about > section > .language ul > :nth-child(3)::before {
+    content: "🇩🇪";
+    margin: 0rem 1rem;
+}
+#home_about > section > .language ul > :nth-child(4)::before {
+    content: "🇻🇬";
+    margin: 0rem 1rem;
+}
+
+/* responsiv */
+    @media screen and (max-width: 1440px) {
+        #home_about > section > article {
+            flex-basis: 40%;
+        }
+    }
+    @media screen and (max-width: 1024px) {
+        #home_about > section > article {
+            flex-basis: 40%;
+        }
+    }
+    @media screen and (max-width: 768px) {
+        #home_about > section > article {
+            flex-basis: 80%;
+        }
+    }
+
+    @media screen and (max-width: 425px) {
+        #about > header > nav > ul {
+            display: flex;
+            flex-wrap: wrap;
+            position: absolute;
+            background: var(--navcolor);
+            right: 0rem;
+            padding: 0rem;
+            border-radius: 0rem 0rem 1rem 1rem;
+    
+            animation: nav 2s;
+        }
+        #about > header > nav > ul li {
+            margin: 0.3rem;
+        }
+        #home_about > h1 {
+            font-size: 4rem;
+        }      
+}
