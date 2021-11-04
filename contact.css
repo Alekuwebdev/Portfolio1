@@ -35,6 +35,12 @@
     color: white;
     margin-top: 2rem;
 }
+#firstname,
+#lastname,
+#email,
+#textarea {
+    color: black;
+}
 input[type="submit"] {
     background: red;
     display: flex;
