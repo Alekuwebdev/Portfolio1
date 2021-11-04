@@ -11,6 +11,7 @@
 }
 #home_projekt > h1 {
     font-size: 4rem;
+    color: black;
 }
 #home_projekt > section {
     display: inline-grid;
