@@ -99,7 +99,7 @@
     #home_projekt h1 {
         font-size: 2.5rem;
         margin-top: 1rem;
-        background: grey;
+        /* background: grey; */
         padding: 0.1rem 0.4rem;
         border-radius: 0.5rem;
     }
